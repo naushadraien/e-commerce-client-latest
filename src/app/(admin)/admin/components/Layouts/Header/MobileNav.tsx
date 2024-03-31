@@ -7,13 +7,12 @@ import Notification from "./Notification";
 import { Profile } from "./Profile";
 import SearchInput from "./Search";
 import { ModeToggle } from "./ThemeToggle";
+import Link from "next/link";
 
 const MobileNav = () => {
   const [click, setClick] = useState(false);
-  console.log(click);
-
   return (
-    <div className="sm:block md:hidden cursor-pointer">
+    <div className="sm:block md:hidden">
       <div
         className={`flex justify-between ${click ? "flex-col" : "flex-row"} ${
           !click && "items-center"
@@ -24,7 +23,9 @@ const MobileNav = () => {
         <div
           className={`flex w-full justify-between ${click ? "pt-8" : "pt-0"}`}
         >
-          <div className="font-bold text-xl">Logo</div>
+          <div className="font-bold text-xl cursor-pointer">
+            <Link href="/admin">MeroStore</Link>
+          </div>
           <Button variant="link" onClick={() => setClick(!click)}>
             {click ? <X /> : <Menu />}
           </Button>
