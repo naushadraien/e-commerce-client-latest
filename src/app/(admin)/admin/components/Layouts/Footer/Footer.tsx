@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-    <div className="w-full border-t-[1px] border-t-gray-400 text-center h-10">
+    <footer className="w-full border-t-[1px] border-t-gray-400 text-center h-10">
       <div>
         Copyright © 2024 Rehan. Design with 💘 by{" "}
         <Link
@@ -14,7 +14,7 @@ const Footer = () => {
         </Link>{" "}
         All rights reserved.
       </div>
-    </div>
+    </footer>
   );
 };
 
