@@ -1,9 +1,6 @@
 import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
 import "./globals.css";
-import Header from "@/components/Layouts/Header/Header";
-import Footer from "@/components/Layouts/Footer/Footer";
-import { ThemeProvider } from "@/lib/providers/ThemeProvider";
 
 const montserrat = Montserrat({ subsets: ["latin"] });
 
@@ -19,18 +16,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={montserrat.className}>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
-          <Header />
-          {children}
-          <Footer />
-        </ThemeProvider>
-      </body>
+      <body className={montserrat.className}>{children}</body>
     </html>
   );
 }
