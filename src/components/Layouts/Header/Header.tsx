@@ -1,3 +1,4 @@
+import Message from "./Message";
 import Notification from "./Notification";
 import SearchInput from "./Search";
 import { ModeToggle } from "./ThemeToggle";
@@ -14,6 +15,7 @@ const Header = () => {
       <div className="flex justify-center items-center gap-5">
         <ModeToggle />
         <Notification />
+        <Message />
       </div>
     </div>
   );
