@@ -4,6 +4,7 @@ import { ThemeProvider } from "@/lib/providers/ThemeProvider";
 import { redirect } from "next/navigation";
 import Header from "./components/Layouts/Header/Header";
 import Footer from "./components/Layouts/Footer/Footer";
+import SideBar from "./components/Layouts/Aside/SideBar";
 
 const montserrat = Montserrat({ subsets: ["latin"] });
 
@@ -31,7 +32,12 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <Header />
-          {children}
+          <div className="flex gap-4">
+            <div className="w-72">
+              <SideBar />
+            </div>
+            <div className="flex-1 bg-[#eff4f8]">{children}</div>
+          </div>
           <Footer />
         </ThemeProvider>
       </body>
