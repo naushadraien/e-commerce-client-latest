@@ -33,10 +33,8 @@ export default function RootLayout({
         >
           <Header />
           <div className="flex gap-4">
-            <div className="w-72">
-              <SideBar />
-            </div>
-            <div className="flex-1 bg-[#eff4f8]">{children}</div>
+            <SideBar />
+            <div className="flex-1 bg-[#eff4f8] h-screen">{children}</div>
           </div>
           <Footer />
         </ThemeProvider>
