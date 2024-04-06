@@ -34,7 +34,7 @@ export default function RootLayout({
           <Header />
           <div className="flex gap-4">
             <SideBar />
-            <div className="flex-1 bg-[#eff4f8] h-screen">{children}</div>
+            <div className="flex-1 bg-[#eff4f8] p-6">{children}</div>
           </div>
           <Footer />
         </ThemeProvider>
